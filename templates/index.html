@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Fake News Predictor</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">  
+	
+		<!-- STYLE CSS -->
+		<!-- <link rel="stylesheet" href="style.css">  -->
+</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="inner">
+				<form action="{{ url_for('predict')}}" method="POST">
+					<h3 >Fake News Predictor</h3>
+					
+			
+					<label class="form-group"  >
+						<textarea name="txt"  class="form-control" required ></textarea>
+						<span for="">Input Message</span>
+						<span class="border"></span>
+					</label>
+					<button value="predict" style="font-size:1.4rem " >Predict
+						<i class="fa fa-angle-right"  style="font-size: 23px; margin-left: 7px;
+						height: 26px;"></i>
+						</button>
+				</form>
+			</div>
+		</div>
+		
+	</body>
+</html>

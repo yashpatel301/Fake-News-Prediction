@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Result</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		
+		  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">  
+		<!-- STYLE CSS -->
+		<!-- <link rel="stylesheet" href="style.css">  -->
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="inner">
+				
+					<h3>Results for Comment</h3>
+					
+			
+					
+						{% if prediction == 1%}
+						<h2  required class="form-control" style="color:rgb(44, 3, 133);font-size: 30px;"> Fake News</h2>
+						{% elif prediction == 0%}
+						<h2  class="form-control" required style="color:rgb(0, 199, 40); font-size: 30px;">Not a Fake News</h2>
+						{% endif %}
+						
+		
+					
+				
+			</div>
+		</div>
+		
+	</body>
+</html>
